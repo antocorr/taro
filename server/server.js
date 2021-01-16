@@ -498,6 +498,8 @@ var Server = IgeClass.extend({
 						ige.addComponent(SoundComponent);
 						ige.addComponent(RegionManager);
 
+						ige.addComponent(VideoChatComponent);
+
 						let map = ige.scaleMap(_.cloneDeep(ige.game.data.map));
 						ige.map.load(map)
 
@@ -606,6 +608,7 @@ var Server = IgeClass.extend({
 		ige.network.define('sound', self._onSomeBullshit);
 		ige.network.define('particle', self._onSomeBullshit);
 		ige.network.define('camera', self._onSomeBullshit);
+		ige.network.define('videoChat', self._onSomeBullshit);
 
 		ige.network.define('gameSuggestion', self._onSomeBullshit);
 		ige.network.define('minimap', self._onSomeBullshit);
